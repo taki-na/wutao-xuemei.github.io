@@ -1,0 +1,227 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>你说，什么是Cloudflare？ | 躺平的blog</title><meta name="keywords" content="CDN,Cloudflare,cf"><meta name="author" content="吴涛学妹"><meta name="copyright" content="吴涛学妹"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="转载自https:&#x2F;&#x2F;cn.quner.icu:8443&#x2F;2022&#x2F;07&#x2F;22&#x2F;你说，什么是cloudflare？&#x2F;   如果你刚开始接触Web，很多教程文档都会推荐你”套CF“。而当你在群里抱怨买的VPS线路不好，源站（存放Web文件）连接不稳定时，群友们肯定会让你”套个CF“。 可是，到底什么是CF？ 当然，有些梗大师会这么解释这个问题：  以及：  ————————————正文分割线————">
+<meta property="og:type" content="article">
+<meta property="og:title" content="你说，什么是Cloudflare？">
+<meta property="og:url" content="http://blog.laozheng.cf/2022/07/27/cf/index.html">
+<meta property="og:site_name" content="躺平的blog">
+<meta property="og:description" content="转载自https:&#x2F;&#x2F;cn.quner.icu:8443&#x2F;2022&#x2F;07&#x2F;22&#x2F;你说，什么是cloudflare？&#x2F;   如果你刚开始接触Web，很多教程文档都会推荐你”套CF“。而当你在群里抱怨买的VPS线路不好，源站（存放Web文件）连接不稳定时，群友们肯定会让你”套个CF“。 可是，到底什么是CF？ 当然，有些梗大师会这么解释这个问题：  以及：  ————————————正文分割线————">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s2.loli.net/2022/07/23/fKZ8FirHowlSL6U.png">
+<meta property="article:published_time" content="2022-07-27T09:05:45.277Z">
+<meta property="article:modified_time" content="2022-08-05T12:35:48.236Z">
+<meta property="article:author" content="吴涛学妹">
+<meta property="article:tag" content="CDN">
+<meta property="article:tag" content="Cloudflare">
+<meta property="article:tag" content="cf">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s2.loli.net/2022/07/23/fKZ8FirHowlSL6U.png"><link rel="shortcut icon" href="/img/91566274_p0.png"><link rel="canonical" href="http://blog.laozheng.cf/2022/07/27/cf/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//static.cloudflareinsights.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script defer="defer" data-pjax="data-pjax" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon="{&quot;token&quot;: &quot;b3430d59ffa54324ac9fc5b375014017&quot;}"></script><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.json","preload":false,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: {"limitDay":180,"position":"top","messagePrev":"距离上次更新已经过了","messageNext":"天，文章所描述的内容可能已经发生变化，请留意。"},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '你说，什么是Cloudflare？',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2022-08-05 20:35:48'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/mycss.css"><meta name="generator" content="Hexo 6.2.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/91566274_p0.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">9</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://s2.loli.net/2022/07/23/fKZ8FirHowlSL6U.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">躺平的blog</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">你说，什么是Cloudflare？</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-07-27T09:05:45.277Z" title="发表于 2022-07-27 17:05:45">2022-07-27</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-08-05T12:35:48.236Z" title="更新于 2022-08-05 20:35:48">2022-08-05</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E4%BA%92%E8%81%94%E7%BD%91/">互联网</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">2.3k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>7分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="你说，什么是Cloudflare？"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><div class="note blue no-icon flat"><p><strong>转载自<a target="_blank" rel="noopener" href="https://cn.quner.icu:8443/2022/07/22/%e4%bd%a0%e8%af%b4%ef%bc%8c%e4%bb%80%e4%b9%88%e6%98%afcloudflare%ef%bc%9f/">https://cn.quner.icu:8443/2022/07/22/你说，什么是cloudflare？/</a></strong></p>
+</div>
+<p><img src="https://s2.loli.net/2022/07/23/fKZ8FirHowlSL6U.png" alt="" /></p>
+<p>如果你刚开始接触Web，很多教程文档都会推荐你”套CF“。而当你在群里抱怨买的VPS线路不好，源站（存放Web文件）连接不稳定时，群友们肯定会让你”套个CF“。</p>
+<p>可是，到底什么是CF？</p>
+<p>当然，有些梗大师会这么解释这个问题：</p>
+<p><img src="https://s2.loli.net/2022/07/23/T7uInriZdzL5e3w.png" alt="c7b39932a19cdb0f0f12e.png" /></p>
+<p>以及：</p>
+<p><img src="https://s2.loli.net/2022/07/23/KdSPNiBv9bHDMXa.png" alt="fe057bdbe6e5dd22b9948.png" /></p>
+<p>————————————正文分割线————————————</p>
+<p>”“Lee Holloway 编写出了Cloudflare。然后他变得冷漠，疏远，不可预测——很长一段时间，没有人能理解它。”</p>
+<p>“ 100多名员工和投资者在下方交易大厅欢呼，他们的手机高高举起捕捉现场。11 号员工Kristin Holloway抬头看着阳台，拍了张照片，然后把它们做成了一条短信，发给了她的丈夫Lee Holloway。他在加利福尼亚的家中。每隔一段时间，就会有一张熟悉的面孔从人群中挤进来对她说：‘Lee应该在这里。’”</p>
+<p>今天，我想和大家聊聊，什么是Cloudflare（CF），它为什么即使不是世界第一（Akamai）却在信息圈备受好评人尽皆知，以及Cloudflare背后的一些隐秘的角落。</p>
+<p>关于Cloudflare，主营DNS（域名解析），CDN（内容分发）和Anti-DDOS（清洗流量）的一家良心企业。相比于世界第一的CDN厂商Akamai根本不toC（Akamai没有面向普通消费者的业务），Cloudflare提供给咱们普通人免费使用的机会。感情上，妥妥收割了一大批用户。如果是你，你会怎么想呢？</p>
+<p><img src="https://s2.loli.net/2022/07/23/nURQTlqZCLfvmWa.png" alt="114efa09354ee5c7eb322.png" /></p>
+<p>（Akamai，其根本不提供toC业务）</p>
+<p><img src="https://s2.loli.net/2022/07/23/9Ot1HRQhUNbPneD.png" alt="1607e1d8cff3e1e67b2da.png" /></p>
+<p><img src="https://s2.loli.net/2022/07/23/hEYlBdmZvXiNo2k.png" alt="e6675f50f356cb9522149.png" /></p>
+<p>（Cloudflare，平易近人）</p>
+<p>从19年到现在，我已经使用Cloudflare近3年了。它给我一种逐渐成长至茁壮的感觉，而且，它不叛逆。（不得不提国内阿*云一再涨价，连当年支持的老用户还下刀）</p>
+<p>举几个简单的例子：</p>
+<p>首先：Web需要一个域名（Domain）。【简单来说，它是你的IP的一个好听的名字，就像IP是身份证号，而域名是姓名。除了重度开盒爱好者，相信应该没人用身份证号称呼别人。】而Cloudflare推出了”不加价“的注册域名服务，换言之，它不赚钱。（鞭尸国外Godad**诱导欺诈）</p>
+<p>PS.域名不会还有人在国内买，乖乖去实名认证备案吧…</p>
+<p>比如，以menggushangdan.com为例。</p>
+<p>GoDad**:</p>
+<p><img src="https://s2.loli.net/2022/07/23/k7cTw3Idi541SEZ.png" alt="932c76d69272abeaf1d0c.png" /></p>
+<p>(表面只要0.19,但必须一次购买两年，平均一年10.18USD)</p>
+<p>Cloudflare:</p>
+<p><img src="https://s2.loli.net/2022/07/23/k7cTw3Idi541SEZ.png" alt="932c76d69272abeaf1d0c.png" /></p>
+<p>（真是个诚信的乖孩子，叔叔我啊，最喜欢CF了）</p>
+<p>再者：Cloudflare著名的DNS1.1.1.1</p>
+<p>从Web的角度，Cloudflare的DNS支持最短TTL到1Min，换句话，你的记录最慢1分钟就会生效。而实测一般10-15秒就生效了。比起某些DNS动辄10分钟的刷新时间，Cloudflare简直秒杀。</p>
+<p><img src="https://s2.loli.net/2022/07/23/itP3Flm87AqjJNI.png" alt="99587cb3de4afd3270b43.png" /></p>
+<p>（TTL，最小值1分钟）</p>
+<p>而从使用者的角度，Cloudflare著名的1.1.1.1DNS，（除大陆以外）地区解析速度都是第一，远超Google8.8.8.8的DNS.（话说之前1.1.1.1似乎被江苏列入墙中墙名单，各位有感觉吗？）</p>
+<p><img src="https://s2.loli.net/2022/07/23/35umtORFDKvLc8E.png" alt="adc5f7abedfa8d1384fb8.png" /></p>
+<p>(来源：1.1.1.1）</p>
+<p>至于什么Doh，Dot等，Cloudflare完全免费满血开放，而不像国内某Pod，竟然额外推出付费服务。</p>
+<p><img src="https://s2.loli.net/2022/07/23/OjAYNHcGxSMI4R2.png" alt="2575150733c9ab8f8f125.png" /></p>
+<p>接着看Cloudflare最受人欢迎的功能，免费CDN。还是之前那张图，看到橙色小云朵吗？代表Cloudflare将调用他全世界的服务器（未备案则大陆除外）帮你分发网站，减少延迟。其使用泛播技术，保证终端优先接触最近的Cloudflare节点，再由CF内部网络完成全世界的转发。</p>
+<p>比如，我的网站quner.cloud。</p>
+<p><img src="https://s2.loli.net/2022/07/23/GsnJFe9INMYcoyV.png" alt="9497a916b69dac406fad3.png" /></p>
+<p>我的主机在德国，如果没有CF，延迟大概在280ms左右，丢包率和响应速度都很拉跨。但套上CF之后，延迟下降到180ms（连接到他们洛杉矶机房，再由他们内部网路路由到当地CF服务器，再请求当地源站）。</p>
+<p><img src="https://s2.loli.net/2022/07/23/QBaxLngcUYPVD89.png" alt="574f67adca3751cebe0cf.png" /></p>
+<p>（测试在凌晨2点，如果白天能到380ms）</p>
+<p>所以，应该有人听说过V2Ray+WS+CF这种对于垃圾线路的加速方式。而因为Cloudflare对于国内很多服务太重要了（大家都在引用套了CF的资源），使得GFW对于Cloudflare也无可奈何。基本上说，当你套了CF，你的VPS（在一直续费的情况下）可以作为传家宝了。</p>
+<p>（另：关于代理协议，以后会写一篇更完整的。）</p>
+<p>而Cloudflare不仅仅起到加速作用，它的DDOS抗打到什么程度，经常有笑话这么讲：</p>
+<p>“我套CF了，希望你成为打穿CF的第一人。”</p>
+<p>就是这么夸张，尽管就算是Mirai僵尸网络，也没把Cloudflare打穿。更何况普通人呢？但为什么经常听到群友抱怨：“我套了CF，还是被DDOS死了。”这是为什么呢？</p>
+<p>“因为他们找到了你的源站IP，而你并没有限制除CF外禁止访问。”</p>
+<p>话说到这里，我想低调宣布一件事情，你可以利用CF辅助渗透，寻找别人源站IP。</p>
+<p>当你把域名添加进CF时，会不会发现它能自动扫描你的所有域名？</p>
+<p>正是这个机制，可以很方便帮我们找旁站，排除掉搜出来是CF泛播的IP，剩下的就是源站IP。这种搜索非常精准，几乎所有常见的域名都可以搜到。例如blog.XXX.com或者repo.xxx.com什么的。</p>
+<p>好不好奇他们怎么做的？CF在官网上表示：他们会对要添加的域名进行常见的前缀扫描。</p>
+<p><img src="https://s2.loli.net/2022/07/23/gyxZONM8rhqfJXi.png" alt="19bc430c1066040ae2f5b.png" /></p>
+<p>让我们选择一位幸运域名参与实验，比如我同学的某域名:xxxdnzj.com</p>
+<p>示范一下标准操作：</p>
+<p><img src="https://s2.loli.net/2022/07/23/x5vA4EwDTcJaGqo.png" alt="d7e5c3459ceb73a002c64.png" /></p>
+<p>Inserting image…</p>
+<p>排除CF的IP，67.230开头的那个IP就是他源站的IP了（用过BWH的就知道67.230这个IP段里面都是美西洛杉矶的CN2 GIA IP）</p>
+<p>怎么样？神不神奇？</p>
+<p>最后，我想以崇敬地态度，提一下CF的创始人之一： Lee Holloway</p>
+<p>我看到最精准，也是最让人难过的评价是：</p>
+<p>“The Devastating Decline of a Brilliant Young Coder</p>
+<p>Lee Holloway programmed internet security firm Cloudflare into being. Then he became apathetic, distant, and unpredictable—for a long time, no one could make sense of it.”</p>
+<p>“一个天才程序员的陨落。”</p>
+<p>Lee Holloway早期可谓神话，在CF里编写蜜罐和流量清洗算法，无所不能。</p>
+<p>“在 Cloudflare 的早年，Lee Holloway 一直是常驻天才，他可以集中注意力几个小时，代码从指尖倾泻而出，同时死亡金属在他的耳机中爆炸。他是一位伟大的建筑师，他的愿景将最初只是一张餐巾纸上的文字草图引导成一家拥有约 1,200 名员工和 83,000 名付费客户的科技巨头。他为现在处理超过 10% 的所有互联网请求并每天阻止数十亿网络威胁的系统奠定了基础。他梦想的大部分建筑仍然存在。”</p>
+<p>“但在 IPO 前几年，他的行为开始发生变化。他对自己的项目和同事失去了兴趣。他在会议上不再专心。他的同事注意到他变得越来越僵化和好战，抵制别人的想法，无视他们的反馈。…神经学家做出了他们的结论：他似乎患有额颞叶痴呆的教科书病例——简称 FTD——特别是这种疾病的行为变异。它针对的大脑区域网络有时被描述为支撑一个人的自我意识。随着病理过程的进展，它正在从李的原料中雕刻出一个不同的人。”</p>
+<p><img src="https://s2.loli.net/2022/07/23/wUH3SL9flsqI5h8.png" alt="6a6b790331d19ca590b01.png" /></p>
+<p>（ Lee Holloway 中）</p>
+<p>“九月星期五2019 年 1 月 13 日，旧金山互联网安全公司 Cloudflare的联合创始人 Matthew Prince 和 Michelle Zatlyn站在一个细长的大理石阳台上，俯瞰纽约证券交易所的地板。一群公司高管站在普林斯附近，准备喊倒计时。“大声点！大声！” 王子催促他们。“五！四！三！……” 上午 9 点 30 分，创始人伸手敲响了交易所著名的钟声，开始了当天的交易，并将他们拥有 10 年历史的公司公开上市。这是一个成年礼，也是他们的发薪日，一个释放数百万美元新财富的时刻。<br />
+“100多名员工和投资者在下方交易大厅欢呼，他们的手机高高举起捕捉现场。11 号员工克里斯汀·霍洛威（Kristin Holloway）抬头看着阳台，拍了张照片，然后把它们做成了一条短信，发给了她的丈夫李·霍洛威（Lee Holloway），他是公司的第三位联合创始人。他在加利福尼亚的家中。每隔一段时间，就会有一张熟悉的面孔从人群中挤进来对她说：“李应该在这里。”</p>
+<p>感谢观看！</p>
+<p>作者：<a target="_blank" rel="noopener" href="https://t.me/qunerCloud">@qunerCloud</a> | Web：<a target="_blank" rel="noopener" href="https://quner.cloud/">https://quner.cloud</a></p>
+<p>参考传记： <a target="_blank" rel="noopener" href="https://www.wired.com/story/lee-holloway-devastating-decline-brilliant-young-coder/">wired.com/story/lee-holloway-devastating-decline-brilliant-young-coder</a></p>
+<p>特别鸣谢：<a target="_blank" rel="noopener" href="https://t.me/Shirker">@Shirker</a></p>
+<p>首发于： <a target="_blank" rel="noopener" href="https://t.me/ShareCentre">https://t.me/ShareCentre</a></p>
+<p>并同步在个人博客<a target="_blank" rel="noopener" href="https://diary.quner.cloud/">https://diary.quner.cloud</a>中。</p>
+</article><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/CDN/">CDN</a><a class="post-meta__tags" href="/tags/Cloudflare/">Cloudflare</a><a class="post-meta__tags" href="/tags/cf/">cf</a></div><div class="post_share"><div class="social-share" data-image="https://s2.loli.net/2022/07/23/fKZ8FirHowlSL6U.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2022/07/27/%E5%B0%86Hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0Cloudflare%E5%B9%B6%E8%AE%BE%E7%BD%AE%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F/"><img class="prev-cover" src="http://img.xjh.me/random_img.php?ctype=acg&amp;return=302" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">将Hexo博客部署到Cloudflare并设置自定义域</div></div></a></div><div class="next-post pull-right"><a href="/2022/07/27/%E5%BC%A0%E5%B0%8F%E9%BE%99/"><img class="next-cover" src="https://s2.loli.net/2022/07/24/sgG61ywBjfIOl5F.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">张小龙与他的微信</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2022/07/27/%E5%B0%86Hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0Cloudflare%E5%B9%B6%E8%AE%BE%E7%BD%AE%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F/" title="将Hexo博客部署到Cloudflare并设置自定义域"><img class="cover" src="http://img.xjh.me/random_img.php?ctype=acg&return=302" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-07-27</div><div class="title">将Hexo博客部署到Cloudflare并设置自定义域</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/91566274_p0.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">吴涛学妹</div><div class="author-info__description">遇到困难摆大烂</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">9</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/wutao-xuemei" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:laozheng@laozheng.cf" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">本博客即将迁移，请留意 | 投稿请发送至我的邮箱</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/08/06/%E8%BF%81%E7%A7%BB/" title="迁移"><img src="/img/bg.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="迁移"/></a><div class="content"><a class="title" href="/2022/08/06/%E8%BF%81%E7%A7%BB/" title="迁移">迁移</a><time datetime="2022-08-05T19:05:36.000Z" title="发表于 2022-08-06 03:05:36">2022-08-06</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/08/03/%E6%8F%90%E9%97%AE%E7%9A%84%E6%99%BA%E6%85%A7/" title="提问的智慧"><img src="/img/bg.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="提问的智慧"/></a><div class="content"><a class="title" href="/2022/08/03/%E6%8F%90%E9%97%AE%E7%9A%84%E6%99%BA%E6%85%A7/" title="提问的智慧">提问的智慧</a><time datetime="2022-08-02T17:30:22.000Z" title="发表于 2022-08-03 01:30:22">2022-08-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/07/28/%E6%97%A0%E9%A2%98/" title="无题"><img src="/img/hope.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"/></a><div class="content"><a class="title" href="/2022/07/28/%E6%97%A0%E9%A2%98/" title="无题">无题</a><time datetime="2022-07-28T13:46:00.000Z" title="发表于 2022-07-28 21:46:00">2022-07-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/07/28/%E5%B8%8C%E6%9C%9B/" title="希望"><img src="/img/hope.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="希望"/></a><div class="content"><a class="title" href="/2022/07/28/%E5%B8%8C%E6%9C%9B/" title="希望">希望</a><time datetime="2022-07-27T18:26:09.626Z" title="发表于 2022-07-28 02:26:09">2022-07-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/07/27/%E5%B0%86Hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0Cloudflare%E5%B9%B6%E8%AE%BE%E7%BD%AE%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F/" title="将Hexo博客部署到Cloudflare并设置自定义域"><img src="http://img.xjh.me/random_img.php?ctype=acg&amp;return=302" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="将Hexo博客部署到Cloudflare并设置自定义域"/></a><div class="content"><a class="title" href="/2022/07/27/%E5%B0%86Hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0Cloudflare%E5%B9%B6%E8%AE%BE%E7%BD%AE%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F/" title="将Hexo博客部署到Cloudflare并设置自定义域">将Hexo博客部署到Cloudflare并设置自定义域</a><time datetime="2022-07-27T09:05:45.290Z" title="发表于 2022-07-27 17:05:45">2022-07-27</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://s2.loli.net/2022/07/23/fKZ8FirHowlSL6U.png')"><div id="footer-wrap"><div class="copyright">&copy;2022 By 吴涛学妹</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
