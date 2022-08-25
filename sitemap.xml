@@ -2,24 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://blog.laozheng.cf/posts/30cd3fd0/</loc>
-    
-    <lastmod>2022-08-25</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.laozheng.cf/posts/af8ae8ee/</loc>
-    
-    <lastmod>2022-08-25</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.laozheng.cf/posts/7e4f94d1/</loc>
     
     <lastmod>2022-08-25</lastmod>
@@ -137,13 +119,6 @@
 
   
   <url>
-    <loc>https://blog.laozheng.cf/tags/%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF/</loc>
-    <lastmod>2022-08-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.laozheng.cf/tags/CDN/</loc>
     <lastmod>2022-08-25</lastmod>
     <changefreq>weekly</changefreq>
@@ -165,21 +140,14 @@
   </url>
   
   <url>
-    <loc>https://blog.laozheng.cf/tags/DNS/</loc>
+    <loc>https://blog.laozheng.cf/tags/Hexo/</loc>
     <lastmod>2022-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.laozheng.cf/tags/Linux/</loc>
-    <lastmod>2022-08-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.laozheng.cf/tags/CentOS/</loc>
+    <loc>https://blog.laozheng.cf/tags/%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2022-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -194,20 +162,6 @@
   
   <url>
     <loc>https://blog.laozheng.cf/tags/cloudflare-warp/</loc>
-    <lastmod>2022-08-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.laozheng.cf/tags/Hexo/</loc>
-    <lastmod>2022-08-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.laozheng.cf/tags/%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2022-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -244,14 +198,14 @@
 
   
   <url>
-    <loc>https://blog.laozheng.cf/categories/%E6%95%99%E7%A8%8B/</loc>
+    <loc>https://blog.laozheng.cf/categories/%E4%BA%92%E8%81%94%E7%BD%91/</loc>
     <lastmod>2022-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.laozheng.cf/categories/%E4%BA%92%E8%81%94%E7%BD%91/</loc>
+    <loc>https://blog.laozheng.cf/categories/%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2022-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
