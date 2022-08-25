@@ -186,20 +186,6 @@
   </url>
   
   <url>
-    <loc>https://blog.laozheng.cf/tags/cloudflare/</loc>
-    <lastmod>2022-08-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.laozheng.cf/tags/cloudflare-warp/</loc>
-    <lastmod>2022-08-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.laozheng.cf/tags/Hexo/</loc>
     <lastmod>2022-08-25</lastmod>
     <changefreq>weekly</changefreq>
@@ -214,13 +200,6 @@
   </url>
   
   <url>
-    <loc>https://blog.laozheng.cf/tags/%E7%A7%91%E5%B9%BB/</loc>
-    <lastmod>2022-08-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.laozheng.cf/tags/%E5%BE%AE%E4%BF%A1/</loc>
     <lastmod>2022-08-25</lastmod>
     <changefreq>weekly</changefreq>
@@ -229,6 +208,27 @@
   
   <url>
     <loc>https://blog.laozheng.cf/tags/%E8%85%BE%E8%AE%AF/</loc>
+    <lastmod>2022-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.laozheng.cf/tags/%E7%A7%91%E5%B9%BB/</loc>
+    <lastmod>2022-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.laozheng.cf/tags/cloudflare/</loc>
+    <lastmod>2022-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.laozheng.cf/tags/cloudflare-warp/</loc>
     <lastmod>2022-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
